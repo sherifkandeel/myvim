@@ -1,11 +1,7 @@
-set nocompatible
 call pathogen#infect()
-colorscheme slate
 source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
 behave mswin
-syntax on
-set number
 set diffexpr=MyDiff()
 function MyDiff()
   let opt = '-a --binary '
@@ -30,5 +26,49 @@ function MyDiff()
   endif
   silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
 endfunction
-NERDTree
 
+
+"starters
+set nocompatible
+
+"set line numbers
+set number
+
+"set colorscheme
+colorscheme slate
+
+"Enable filetypes
+filetype on
+filetype plugin on
+filetype indent on
+syntax on
+
+"Write the old file out when switching between files.
+set autowrite
+
+"Display current cursor position in lower right corner.
+set ruler
+
+"starts the NERDTree plugin, and directs it to the work folder.
+autocmd VimEnter * NERDTree C:\Work\
+
+"sets spell correction 
+set spell
+
+"Better line wrapping 
+set wrap
+set textwidth=79
+set formatoptions=qrn1
+
+"Set incremental searching"
+set incsearch
+
+"Highlight searching
+set hlsearch
+
+" case insensitive search
+set ignorecase
+set smartcase
+
+"Switch between buffers without saving
+set hidden
