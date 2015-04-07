@@ -1,0 +1,63 @@
+call pathogen#infect()
+
+"starters
+set nocompatible
+
+"set line numbers
+set number
+
+"set colorscheme
+colorscheme slate
+
+"Enable filetypes
+filetype on
+filetype plugin on
+filetype indent on
+syntax on
+
+"Write the old file out when switching between files.
+set autowrite
+
+"Display current cursor position in lower right corner.
+set ruler
+
+"starts the NERDTree plugin, and directs it to the work folder.
+autocmd VimEnter * NERDTree 
+
+"sets spell correction 
+"set spell
+
+"Better line wrapping 
+set nowrap
+set textwidth=79
+set formatoptions=qrn1
+
+"Set incremental searching"
+set incsearch
+
+"Highlight searching
+set hlsearch
+
+" case insensitive search
+set ignorecase
+set smartcase
+
+"Switch between buffers without saving
+set hidden
+
+"setting tab to 4 spaces:
+set tabstop =4 
+set shiftwidth =4 
+set expandtab
+"mapping the command to run the python file we're editing
+nmap ,dt :!python %<CR>
+
+"opening any new tab to the right
+set splitright
+
+"executing python 
+nmap ,dt :!python % <CR>
+
+"setting paste toggle to turn off autoindent when pasting
+set pastetoggle=<F12>
+
