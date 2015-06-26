@@ -69,3 +69,12 @@ nmap ,dt :!python % <CR>
 "setting paste toggle to turn off autoindent when pasting
 set pastetoggle=<F12>
 
+"hide files with extensions pyc from the nerdtree
+let NERDTreeIgnore = ['\.pyc$']
+
+"map the window movements: 
+noremap <silent> el <C-W>l
+noremap <silent> ek <C-W>k
+noremap <silent> eh <C-W>h
+noremap <silent> ej <C-W>j
+
