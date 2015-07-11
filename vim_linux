@@ -4,6 +4,12 @@
 "cd ~/.vim/bundle
 "git clone https://github.com/scrooloose/nerdtree.git
 
+"cd ~/.vim/bundle
+"git clone git://github.com/tpope/vim-commentary.git
+
+"cd ~/.vim/bundle
+"git clone git://github.com/tpope/vim-surround.git
+
 "vim ~/.vimrc 
 
 call pathogen#infect()
@@ -77,4 +83,8 @@ noremap <silent> el <C-W>l
 noremap <silent> ek <C-W>k
 noremap <silent> eh <C-W>h
 noremap <silent> ej <C-W>j
+
+"mapping the relativenumber
+nmap rn :set relativenumber <CR>
+nmap nrn :set norelativenumber <CR>
 
